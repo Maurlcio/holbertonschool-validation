@@ -4,4 +4,8 @@ WIP
 
 ## Lifecycle
 
-WIP
+clean: WIP
+
+build: WIP
+
+post: WIP
