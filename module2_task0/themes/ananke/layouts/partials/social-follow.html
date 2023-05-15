@@ -1,4 +1,3 @@
-
 {{ $socials := where (partialCached "func/socials/Get" "socials/Get") "follow" "!=" false }}
 <div class="ananke-socials">
   {{ range $socials }}
