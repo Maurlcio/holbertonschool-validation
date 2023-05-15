@@ -1,4 +1,4 @@
-build: lint ## Initiates the website
+build: ## Initiates the website
 	@hugo
 	@go build -o awesome-api
 
