@@ -1,0 +1,10 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Awesome Inc.'
+publishDir = 'dist'
+
+[module]
+[[module.imports]]
+  path = 'github.com/theNewDynamic/gohugo-theme-ananke'
+
+theme = 'ananke'
