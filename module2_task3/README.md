@@ -22,4 +22,4 @@ lint: WIP
 
 unit-tests: WIP
 
-intgration-tests: WIP
+integration-tests: WIP
