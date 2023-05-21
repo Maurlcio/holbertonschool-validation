@@ -30,7 +30,7 @@ help: ## shows help
 	@awk -F ': ' '/^[^#].*: /{printf "  %-15s%s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 unit-tests: ## self-explanatory
-	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go test -v short -coverprofile=coverage-units.out
+	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go test -v -short -coverprofile=coverage-units.out
 
 integration-tests: ## self-explanatory
 	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go test -v -coverprofile=coverage-integrations.out
