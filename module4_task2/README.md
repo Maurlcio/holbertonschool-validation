@@ -30,6 +30,8 @@ validate: WIP
 
 package: WIP
 
+build-docker: WIP
+
 ## Workflow
 
 WIP
