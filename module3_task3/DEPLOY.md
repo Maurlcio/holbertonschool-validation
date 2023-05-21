@@ -1,9 +1,9 @@
-## What is in the archive and how to unarchive it? WIP
 
--What are the commands to start and stop the application? WIP
--How to customize where the application logs are written? WIP
--How to “quickly” verify that the application is running (healthcheck)? WIP
+# What is in the archive and how to unarchive it?
 
+-What are the commands to start and stop the application?
+-How to customize where the application logs are written?
+-How to “quickly” verify that the application is running (healthcheck)?
 -A workflow run triggered by a a git tag name 1.0.0 should:
 
 Create a GitHub Release using the “softprops/gh-release” GitHub Action named
