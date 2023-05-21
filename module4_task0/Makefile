@@ -1,12 +1,9 @@
 lint: ## runs the linter
 	@markdownlint DEPLOY.md README.md
 
-build: check ## in charge of building the website
-	@hugo
-	@echo 'make lint'
-	@echo 'make unit-tests'
-	@echo 'make integration-tests'
-	@echo 'make validate'
+build: ## in charge of building the website
+	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go build
+	@hugo > /dev/null 2>&1
 
 run: ## run app
 	@./awesome-api >./awesome-api.log 2>&1 &
@@ -33,10 +30,10 @@ help: ## shows help
 	@awk -F ': ' '/^[^#].*: /{printf "  %-15s%s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 unit-tests: ## self-explanatory
-	@go test -v -short -coverprofile=coverage-units.out
+	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go test -v short -coverprofile=coverage-units.out
 
 integration-tests: ## self-explanatory
-	@go test -v -coverprofile=coverage-integrations.out
+	@docker run --volume ${GITHUB_WORKSPACE}/module4_task0/:/go golang:1.15.8-buster ls && go test -v -coverprofile=coverage-integrations.out
 
 check: ## checker
 	@markdownlint ./content/posts/*
