@@ -1,7 +1,7 @@
 ---
 name: module3_task0
 run-name: module3_task0
-on:
+on:  # yamllint disable-line rule:truthy
   push:
   schedule:
     - cron: "12 12 * * *"
