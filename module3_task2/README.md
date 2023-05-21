@@ -28,6 +28,8 @@ check: WIP
 
 validate: WIP
 
+package: WIP
+
 ## Workflow
 
 WIP
