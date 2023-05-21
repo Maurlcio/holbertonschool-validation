@@ -32,6 +32,8 @@ package: WIP
 
 build-docker: WIP
 
+docker-tests: WIP
+
 ## Workflow
 
 WIP
