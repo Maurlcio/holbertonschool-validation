@@ -1,9 +1,12 @@
 lint: ## runs the linter
-	@golangci-lint run
+	@markdownlint DEPLOY.md README.md
 
 build: check ## in charge of building the website
 	@hugo
-	@go build -o awesome-api
+	@echo 'make lint'
+	@echo 'make unit-tests'
+	@echo 'make integration-tests'
+	@echo 'make validate'
 
 run: ## run app
 	@./awesome-api >./awesome-api.log 2>&1 &
